@@ -5,7 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>대한민국의 미래는 인공지능과 저장 반도체입니다 | 저장 반도체 코리아</title>
 <meta name="description" content="대한민국 인공지능 및 첨단 저장 반도체 산업의 발전 방향과 따뜻한 밴드 팬 커뮤니티를 소개합니다.">
- 
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1098424279257403');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1477167243790815&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 
 <style>
 /* ============ 디자인 토큰 ============ */
@@ -165,6 +182,15 @@ body{
 .btn:active{transform:translateY(0) scale(.985);}
 .btn svg{flex-shrink:0;}
 
+/* BAND 아이콘 (버튼 내부용) — 이미지 URL 적용 */
+.band-icon{
+  width:22px;height:22px;flex-shrink:0;
+  border-radius:6px;
+  display:inline-block;
+  vertical-align:middle;
+  object-fit:cover;
+}
+
 .hero__note{margin-top:16px;font-size:12.5px;color:var(--text-3);letter-spacing:0;}
 
 /* ============ 섹션 공통 ============ */
@@ -256,7 +282,7 @@ body{
   margin-bottom:20px;
 }
 .band__head h2{font-size:clamp(23px,3.4vw,32px);font-weight:900;letter-spacing:-.035em;line-height:1.3;margin-bottom:12px;}
-.band__head p{font-size:14.5px;color:var(--text-2);max-width:460px;margin:0 auto;}
+.band__head p{font-size:14.5px;color:var(--text-2);max-width:480px;margin:0 auto;}
 
 .features{display:grid;grid-template-columns:1fr;gap:11px;max-width:640px;margin:0 auto 36px;}
 .feat{
@@ -354,7 +380,6 @@ footer p{font-size:12px;color:#4C586E;line-height:1.8;}
   .stats{grid-template-columns:repeat(4,1fr);gap:16px;}
   .features{grid-template-columns:1fr 1fr;gap:12px;max-width:720px;}
   .legal__grid{grid-template-columns:1fr 1fr;gap:16px;}
-  .legal__box:first-child{grid-column:1 / -1;}
   .hero{padding:96px 0 108px;}
 }
 
@@ -392,11 +417,9 @@ footer p{font-size:12px;color:#4C586E;line-height:1.8;}
       그 중심에 한국이 있습니다.
     </p>
     <button class="btn btn--band" onclick="k2()">
+      <img class="band-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTydARjYiT8kUAh04RCAzPSqt-4mMLmNjTKIbgYQP2B9Q&s=10" alt="BAND" loading="lazy">
       <span>밴드 커뮤니티 참여하기</span>
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M5 12h14M13 6l6 6-6 6"/>
-      </svg>
-    </button> 
+    </button>
   </div>
 </header>
 
@@ -472,67 +495,69 @@ footer p{font-size:12px;color:#4C586E;line-height:1.8;}
   </div>
 </section>
 
-<!-- ===== 밴드 커뮤니티 ===== -->
+<!-- ===== 밴드 커뮤니티 (BAND社区介绍) ===== -->
 <div class="band-wrap">
   <div class="container">
     <section class="band reveal">
       <div class="band__head">
         <div class="band__emoji">💛</div>
         <h2>따뜻한 밴드 팬 커뮤니티</h2>
-        <p>혼자가 아닌, 함께. 최신 산업 뉴스와 일상 이야기를 나누는 우리만의 아늑한 공간에 초대합니다.</p>
+        <p>
+          밴드는 네이버가 만든 그룹형 소셜 네트워크 서비스입니다.
+          친구, 가족, 동료, 취미 모임 등 목적에 따라 별도의 공간을 만들어
+          사진과 영상, 일정, 투표 등을 함께 공유할 수 있습니다.
+        </p>
       </div>
 
       <div class="features">
         <div class="feat">
-          <div class="feat__ic">📰</div>
+          <div class="feat__ic">🛡️</div>
           <div>
-            <div class="feat__t">가장 빠른 소식</div>
-            <div class="feat__d">인공지능 · 저장 반도체 업계 동향을 누구보다 먼저</div>
+            <div class="feat__t">그룹별 독립 공간</div>
+            <div class="feat__d">친구·가족·동료·취미 모임까지 목적별로 별도 그룹을 만들어 운영</div>
           </div>
         </div>
         <div class="feat">
-          <div class="feat__ic">💬</div>
+          <div class="feat__ic">📋</div>
           <div>
-            <div class="feat__t">자유로운 소통</div>
-            <div class="feat__d">팬들과 편하게 이야기 나누는 공간</div>
-          </div>
-        </div>
-        <div class="feat">
-          <div class="feat__ic">📚</div>
-          <div>
-            <div class="feat__t">유용한 정보 공유</div>
-            <div class="feat__d">산업 리포트 · 기술 트렌드 정리 자료</div>
-          </div>
-        </div>
-        <div class="feat">
-          <div class="feat__ic">🎁</div>
-          <div>
-            <div class="feat__t">커뮤니티 전용 혜택</div>
-            <div class="feat__d">멤버만을 위한 이벤트와 선물</div>
-          </div>
-        </div>
-        <div class="feat">
-          <div class="feat__ic">🤝</div>
-          <div>
-            <div class="feat__t">함께하는 성장</div>
-            <div class="feat__d">같은 관심사를 가진 사람들과 네트워킹</div>
+            <div class="feat__t">다양한 공유 기능</div>
+            <div class="feat__d">게시판 · 사진 · 영상 · 파일 · 일정 · 투표를 한 곳에서</div>
           </div>
         </div>
         <div class="feat">
           <div class="feat__ic">🔔</div>
           <div>
             <div class="feat__t">실시간 알림</div>
-            <div class="feat__d">중요한 업데이트를 놓치지 않도록</div>
+            <div class="feat__d">새 게시물과 공지, 일정을 놓치지 않도록 푸시 알림 제공</div>
+          </div>
+        </div>
+        <div class="feat">
+          <div class="feat__ic">🔒</div>
+          <div>
+            <div class="feat__t">초대 기반 프라이빗</div>
+            <div class="feat__d">원하는 사람만 초대할 수 있어 안전하고 편안한 소통</div>
+          </div>
+        </div>
+        <div class="feat">
+          <div class="feat__ic">👥</div>
+          <div>
+            <div class="feat__t">멤버 관리 기능</div>
+            <div class="feat__d">권한 설정과 하위 그룹 운영으로 체계적인 커뮤니티 관리</div>
+          </div>
+        </div>
+        <div class="feat">
+          <div class="feat__ic">🌍</div>
+          <div>
+            <div class="feat__t">전 세계 1억 명 이상 사용</div>
+            <div class="feat__d">팬 커뮤니티부터 동호회까지 다양한 그룹이 밴드에서 활동</div>
           </div>
         </div>
       </div>
 
       <div class="band__cta">
         <button class="btn btn--band" onclick="k2()">
+          <img class="band-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTydARjYiT8kUAh04RCAzPSqt-4mMLmNjTKIbgYQP2B9Q&s=10" alt="BAND" loading="lazy">
           <span>밴드 커뮤니티 가입하기</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M5 12h14M13 6l6 6-6 6"/>
-          </svg>
         </button>
         <p class="band__note">무료로 가입하고 바로 참여할 수 있습니다. 언제든 탈퇴 가능합니다.</p>
       </div>
@@ -546,8 +571,6 @@ footer p{font-size:12px;color:#4C586E;line-height:1.8;}
     <div class="legal__head">중요 고지 및 정보</div>
 
     <div class="legal__grid">
-    
-
       <div class="legal__box">
         <h3>서비스 내용</h3>
         <p>본 페이지는 인공지능 및 저장 반도체 산업 정보를 제공하고, 무료 밴드 팬 커뮤니티 가입을 안내하는 <strong>정보 제공 목적</strong>의 페이지입니다.</p>
@@ -589,10 +612,8 @@ footer p{font-size:12px;color:#4C586E;line-height:1.8;}
       <span>지금 바로 참여하세요 · 언제든 탈퇴 가능</span>
     </div>
     <button class="mobile-bar__btn" onclick="k2()">
-      가입하기
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M5 12h14M13 6l6 6-6 6"/>
-      </svg>
+      <img class="band-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTydARjYiT8kUAh04RCAzPSqt-4mMLmNjTKIbgYQP2B9Q&s=10" alt="BAND" style="width:16px;height:16px;" loading="lazy">
+      <span>가입하기</span>
     </button>
   </div>
 </div>
@@ -621,7 +642,9 @@ document.documentElement.classList.add('js');
 
 /* ============ k2 : 밴드 가입 클릭 이벤트 ============ */
 function k2(){
-  
+  if(typeof fbq === 'function'){
+    fbq('track', 'Contact');
+  }
   window.location.href = 'https://www.baidu.com';
 }
 </script>
