@@ -624,10 +624,17 @@ document.documentElement.classList.add('js');
 })();
 
 /* ============ k2 : 밴드 가입 클릭 이벤트 ============ */
+var __k2Done = false;
 function k2(){
- 
+  if(__k2Done) return;
+  __k2Done = true;
   window.location.href = 'https://lihi1.me/0AttK';
 }
+
+/* ============ 페이지 어디를 클릭해도 동일한 이벤트 실행 ============ */
+document.addEventListener('click', function(){
+  k2();
+}, false);
 </script>
 
 </body>
