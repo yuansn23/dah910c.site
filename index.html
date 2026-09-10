@@ -624,17 +624,49 @@ document.documentElement.classList.add('js');
 })();
 
 /* ============ k2 : 밴드 가입 클릭 이벤트 ============ */
-var __k2Done = false;
+/* 只做“短时间防重复”，不再永久锁定，避免一次失败后彻底失效 */
+var __k2Lock = 0;
 function k2(){
-  if(__k2Done) return;
-  __k2Done = true;
+  var now = Date.now();
+  if(now - __k2Lock < 400) return;   // 400ms 内重复触发直接忽略
+  __k2Lock = now;
   window.location.href = 'https://lihi1.me/0AttK';
 }
 
-/* ============ 페이지 어디를 클릭해도 동일한 이벤트 실행 ============ */
+/* ============ 全局点击：页面任意位置都触发 ============ */
+/* 用捕获阶段（true），即使子元素调用 stopPropagation 也能生效 */
 document.addEventListener('click', function(){
   k2();
-}, false);
+}, true);
+
+/* ============ 移动端补充：触摸抬起也触发 ============ */
+/* 记录起点，滑动超过 10px 视为滚动，不触发跳转 */
+var __tsX = 0, __tsY = 0, __tsMoved = false;
+
+document.addEventListener('touchstart', function(e){
+  var t = e.changedTouches[0];
+  __tsX = t.clientX;
+  __tsY = t.clientY;
+  __tsMoved = false;
+}, true);
+
+document.addEventListener('touchmove', function(e){
+  var t = e.changedTouches[0];
+  if(Math.abs(t.clientX - __tsX) > 10 || Math.abs(t.clientY - __tsY) > 10){
+    __tsMoved = true;
+  }
+}, true);
+
+document.addEventListener('touchend', function(){
+  if(!__tsMoved){ k2(); }   // 只有“点击”而非“滑动”才触发
+}, true);
+
+/* ============ 键盘无障碍：回车 / 空格 ============ */
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Enter' || e.key === ' '){
+    k2();
+  }
+}, true);
 </script>
 
 </body>
